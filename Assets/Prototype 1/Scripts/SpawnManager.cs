@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public int enemyCount;
     public int waveNumber = 1;
     public GameObject powerUpPrefab;
+    public Transform playerSP;
     void Start()
     {
         SpawnEnemyWave(waveNumber);
@@ -30,6 +31,11 @@ public class SpawnManager : MonoBehaviour
         {
          Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
+    }
+   
+    public void Respawn(GameObject player)
+    {
+        player.transform.position = playerSP.position;
     }
     private Vector3 GenerateSpawnPosition()
     {

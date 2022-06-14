@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public SpawnManager sp;
     private Rigidbody playerRb;
     public float speed = 5.0f;
     private GameObject focalPoint;
     public bool hasPowerUp;
     private float powerUpStrength = 15.0f;
     public GameObject powerUpIndicator;
+    
+    
 
     void Start()
     {
@@ -18,11 +21,16 @@ public class PlayerController : MonoBehaviour
     }
 
    
-    void Update()
+    void FixedUpdate()
     {
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
         powerUpIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+        if (transform.position.y < -10)
+        {
+            playerRb.velocity = Vector3.zero;
+                sp.Respawn(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
