@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public int waveNumber = 1;
     public GameObject powerUpPrefab;
     public Transform playerSP;
+    public Transform enemySP;
     void Start()
     {
         SpawnEnemyWave(waveNumber);
@@ -29,7 +30,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+         Instantiate(enemyPrefab, enemySP.transform.position/*GenerateSpawnPosition()*/, enemyPrefab.transform.rotation);
         }
     }
    

@@ -21,10 +21,12 @@ public class SimplePlayerController : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
+        controller.Move(Physics.gravity * Time.deltaTime);
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
