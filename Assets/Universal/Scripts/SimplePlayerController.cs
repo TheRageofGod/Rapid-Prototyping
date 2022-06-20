@@ -73,5 +73,6 @@ public class SimplePlayerController : MonoBehaviour
             enemyRigidbody.AddForce(awayFromPlayer * powerUpStrength, ForceMode.Impulse);
         }
     }
+    
 
 }

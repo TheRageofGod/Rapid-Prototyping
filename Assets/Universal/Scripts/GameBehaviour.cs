@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class GameBehaviour : MonoBehaviour
 {
+    protected static Timer _TIMER { get { return Timer.INSTANCE; } }
+    protected static UIManager _UI { get { return UIManager.INSTANCE; } }
+
     /// <summary>
     /// Gets Random colour using the RGB colourWheel with an alpha of 1
     /// </summary>
@@ -34,5 +37,47 @@ public class GameBehaviour : MonoBehaviour
         cvg.DOFade(0, tweenTime).SetEase(ease);
         cvg.interactable = false;
         cvg.blocksRaycasts = false;
+    }
+}
+
+
+
+
+/// <summary>
+/// the code for a singleton
+/// </summary>
+/// <typeparam name="T"></typeparam>
+public class GameBehaviour<T> : GameBehaviour where T : GameBehaviour
+{
+    private static T instance_;
+
+    public static T INSTANCE
+    {
+        get
+        {
+            if(instance_ == null)
+            {
+                instance_ = GameObject.FindObjectOfType<T>();
+                if(instance_ == null)
+                {
+                    GameObject singleton = new GameObject(typeof(T).Name);
+                    singleton.AddComponent<T>();
+                }
+
+            }
+            return instance_;
+        }
+    }
+
+    protected virtual void Awake()
+    {
+        if(instance_ == null)
+        {
+            instance_ = this as T;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
