@@ -14,7 +14,7 @@ public class Compost : MonoBehaviour
     {
         if (collision.tag == "pile")
         {
-            //compost.SetActive(false);
+            compost.SetActive(false);
             Ui.AddToComp();
             compost.transform.position = sp.position;
         }

@@ -6,13 +6,15 @@ using TMPro;
 
 public class UI_Manager : GameBehaviour
 {
-    public int health;
-    public int fert;
-    public int water;
-    public int pest;
+    public float health;
+    public float fert;
+    public float water;
+    public float pest;
+
     public int fertStore;
     public int waterStore;
     public int pestStore;
+    
     public int comp;
 
     public TMP_Text HealthDis;
@@ -25,21 +27,24 @@ public class UI_Manager : GameBehaviour
     public Slider pestLevel;
 
     public Timer time;
+    float currentTime;
     // Start is called before the first frame update
     void Start()
     {
-        waterLevel.value = 50f;
-        waterLevel.maxValue = 100f;
-        fertLevel.value = 50f;
-        fertLevel.maxValue = 100f;
-        pestLevel.value = 50f;
-        pestLevel.maxValue = 50f;
+   
 
 
         health = 100;
         fert = 50;
         water = 50;
-        pest = 50;
+        pest = 25;
+
+        waterLevel.value = water;
+        waterLevel.maxValue = 100f;
+        fertLevel.value = fert;
+        fertLevel.maxValue = 100f;
+        pestLevel.value = pest;
+        pestLevel.maxValue = 50f;
 
         time.StartTimer();
     }
@@ -47,30 +52,43 @@ public class UI_Manager : GameBehaviour
     // Update is called once per frame
     void Update()
     {
+        waterLevel.value = water;
+        fertLevel.value = fert;
+        pestLevel.value = pest;
+
         HealthDis.text = "HP:" + health;
         fertStoreDis.text = "Compost:" + fertStore + "Kg";
         waterStoreDis.text = "Water:" + waterStore + "L";
         pestStoreDis.text = "Pestecide" + pestStore + "g";
 
-
-        if (health <= 0)
+        if (time.TimeExpired())
         {
-            GameOver();
+            pest = pest - 10;
+            fert = fert - 20;
+            time.StartTimer();
         }
-        if (fert >= 95)
+        if (time.IsTiming())
         {
-            GameOver();
+           
         }
-        if (pest >= 95)
+        currentTime += Time.deltaTime;
+        if(currentTime > 1)
         {
-            GameOver();
+            water -= 1;
+            currentTime = 0;
         }
-        if (water >= 95)
-        {
-            GameOver();
-        }
-
         
+  
+        if (fert >= 95 || pest >= 95 || water >= 95 || health <= 0)
+        {
+            GameOver();
+        }
+        if (fert <= 0 || pest <= 0 || water <= 0 )
+        {
+            health = health - 1;
+        }
+
+
     }
 
     public void AddToComp()
@@ -82,7 +100,7 @@ public class UI_Manager : GameBehaviour
     {
         if (waterStore > 0f)
         {
-            waterLevel.value = waterLevel.value + 1f;
+            water = water + 4f;
             waterStore = waterStore - 1;
         }
     }
@@ -90,7 +108,7 @@ public class UI_Manager : GameBehaviour
     {
         if (fertStore > 0f)
         {
-            fertLevel.value = fertLevel.value + 1f;
+            fert = fert + 1f;
             fertStore = fertStore - 1;
         }
     }
@@ -98,7 +116,7 @@ public class UI_Manager : GameBehaviour
     {
         if (pestStore > 0)
         {
-            pestLevel.value = pestLevel.value + 1f;
+            pest = pest + 1f;
             pestStore = pestStore - 1;
         }
     }
