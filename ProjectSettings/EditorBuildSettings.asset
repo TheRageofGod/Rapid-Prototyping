@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype 1/Scenes/Prototype 1 v 2.unity
     guid: eb0df69f7ad43b8468920a4cb288dee8
+  - enabled: 1
+    path: Assets/Prototype 2/Scenes/Planter.unity
+    guid: 3b060519aaa88834389530041f0b4190
   m_configObjects: {}
