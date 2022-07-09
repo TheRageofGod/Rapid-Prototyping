@@ -87,9 +87,9 @@ public class Timer : GameBehaviour<Timer>
     /// <summary>
     /// checks if timer has expired
     /// </summary>
-    /// <returns>returns true if timer is less than 0</returns>
+    /// <returns>returns true if timer is less than or equal 0</returns>
     public bool TimeExpired()
     {
-        return currentTime < 0f;
+        return currentTime <= 0f;
     }
 }

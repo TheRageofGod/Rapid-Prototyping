@@ -28,6 +28,7 @@ public class UI_Manager : GameBehaviour
 
     public Timer time;
     float currentTime;
+    float healthTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +65,7 @@ public class UI_Manager : GameBehaviour
         if (time.TimeExpired())
         {
             pest = pest - 10;
-            fert = fert - 20;
+            fert = fert - 5;
             time.StartTimer();
         }
         if (time.IsTiming())
@@ -85,7 +86,12 @@ public class UI_Manager : GameBehaviour
         }
         if (fert <= 0 || pest <= 0 || water <= 0 )
         {
-            health = health - 1;
+            healthTimer += Time.deltaTime;
+            if (healthTimer > 1)
+            {
+                health = health - 1;
+                healthTimer = 0;
+            }
         }
 
 
