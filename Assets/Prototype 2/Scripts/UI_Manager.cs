@@ -30,9 +30,14 @@ public class UI_Manager : GameBehaviour
     public GameObject compost;
     public GameObject trash;
 
+    public GameObject sap1;
+    public GameObject sap2;
+    public GameObject sap3;
+
     public Timer time;
     float currentTime;
     float healthTimer;
+    float gameTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +103,17 @@ public class UI_Manager : GameBehaviour
             }
         }
 
+        gameTimer += Time.deltaTime;
+        if(gameTimer == 60)
+        {
+            sap1.SetActive(false);
+            sap2.SetActive(true);
+        }
+        if(gameTimer == 120)
+        {
+            sap2.SetActive(false);
+            sap3.SetActive(true);
+        }
 
     }
 
