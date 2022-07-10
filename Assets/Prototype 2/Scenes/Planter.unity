@@ -996,7 +996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219979444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -303, y: -65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1172,6 +1172,8 @@ MonoBehaviour:
   waterLevel: {fileID: 1595496837}
   fertLevel: {fileID: 1620596246}
   pestLevel: {fileID: 465453254}
+  compost: {fileID: 1819761178}
+  trash: {fileID: 6945538617141438586}
   time: {fileID: 1691789204}
 --- !u!114 &339561574
 MonoBehaviour:
@@ -2091,7 +2093,7 @@ GameObject:
   - component: {fileID: 730518438}
   m_Layer: 5
   m_Name: Bin
-  m_TagString: Untagged
+  m_TagString: bin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3527,7 +3529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDirection: 1
-  startTime: 30
+  startTime: 10
 --- !u!4 &1691789205
 Transform:
   m_ObjectHideFlags: 0
@@ -5254,7 +5256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &8286669389620512076
 BoxCollider2D:
   m_ObjectHideFlags: 0

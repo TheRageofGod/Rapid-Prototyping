@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : GameBehaviour
 {
@@ -25,6 +26,9 @@ public class UI_Manager : GameBehaviour
     public Slider waterLevel;
     public Slider fertLevel;
     public Slider pestLevel;
+
+    public GameObject compost;
+    public GameObject trash;
 
     public Timer time;
     float currentTime;
@@ -67,16 +71,15 @@ public class UI_Manager : GameBehaviour
             pest = pest - 10;
             fert = fert - 5;
             time.StartTimer();
+            StartCoroutine(Spawn());
         }
-        if (time.IsTiming())
-        {
-           
-        }
+
         currentTime += Time.deltaTime;
         if(currentTime > 1)
         {
             water -= 1;
             currentTime = 0;
+            
         }
         
   
@@ -86,6 +89,7 @@ public class UI_Manager : GameBehaviour
         }
         if (fert <= 0 || pest <= 0 || water <= 0 )
         {
+            Check();
             healthTimer += Time.deltaTime;
             if (healthTimer > 1)
             {
@@ -97,7 +101,23 @@ public class UI_Manager : GameBehaviour
 
     }
 
-    public void AddToComp()
+
+    public void Check()
+    {
+        if (pest <= 0)
+        {
+            pest = 0;
+        }
+        if (fert <= 0)
+        {
+            fert = 0;
+        }
+        if (water <= 0)
+        {
+            water = 0;
+        }
+    }
+        public void AddToComp()
     {
         comp = comp + 1;
     }
@@ -150,8 +170,23 @@ public class UI_Manager : GameBehaviour
         pestStore = pestStore + 1;
         StopCoroutine(Delay());
     }
+    IEnumerator Spawn()
+    {
+        if (Random.value < .2)
+        {
+            
+            trash.SetActive(true);
+        }
+        else
+        {
+            compost.SetActive(true);
+        }
+            
+        yield return new WaitForEndOfFrame();
+        StopCoroutine(Spawn());
+    }
     public void GameOver()
     {
-
+        SceneManager.LoadScene("GameOver");
     }
 }

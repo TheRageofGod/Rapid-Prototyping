@@ -12,10 +12,12 @@ public class Trash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        trash.SetActive(false);
+        if (collision.tag == "bin")
+        {
+            trash.SetActive(false);
 
-        trash.transform.position = sp.position;
+            trash.transform.position = sp.position;
+        }
     }
 
 }

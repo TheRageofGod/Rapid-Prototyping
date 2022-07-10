@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - drag
   - pile
+  - bin
   layers:
   - Default
   - TransparentFX
