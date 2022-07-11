@@ -22,6 +22,7 @@ public class UI_Manager : GameBehaviour
     public TMP_Text fertStoreDis;
     public TMP_Text waterStoreDis;
     public TMP_Text pestStoreDis;
+    public TMP_Text disTimer;
 
     public Slider waterLevel;
     public Slider fertLevel;
@@ -38,12 +39,10 @@ public class UI_Manager : GameBehaviour
     float currentTime;
     float healthTimer;
     float gameTimer;
+   
     // Start is called before the first frame update
     void Start()
-    {
-   
-
-
+    { 
         health = 100;
         fert = 50;
         water = 50;
@@ -57,6 +56,7 @@ public class UI_Manager : GameBehaviour
         pestLevel.maxValue = 50f;
 
         time.StartTimer();
+        
     }
 
     // Update is called once per frame
@@ -67,16 +67,17 @@ public class UI_Manager : GameBehaviour
         pestLevel.value = pest;
 
         HealthDis.text = "HP:" + health;
-        fertStoreDis.text = "Compost:" + fertStore + "Kg";
-        waterStoreDis.text = "Water:" + waterStore + "L";
-        pestStoreDis.text = "Pestecide" + pestStore + "g";
+        fertStoreDis.text = "Compost:<br> " + fertStore + "Kg";
+        waterStoreDis.text = "Water: <br>" + waterStore + "L";
+        pestStoreDis.text = "Pestecide:<br> " + pestStore + "g";
+        disTimer.text = "Time:" + gameTimer;
 
         if (time.TimeExpired())
         {
             pest = pest - 10;
             fert = fert - 5;
             time.StartTimer();
-            StartCoroutine(Spawn());
+            Spawn();
         }
 
         currentTime += Time.deltaTime;
@@ -120,18 +121,10 @@ public class UI_Manager : GameBehaviour
 
     public void Check()
     {
-        if (pest <= 0)
-        {
-            pest = 0;
-        }
-        if (fert <= 0)
-        {
-            fert = 0;
-        }
-        if (water <= 0)
-        {
-            water = 0;
-        }
+        if (pest <= 0) pest = 0;
+        if (fert <= 0)fert = 0;
+        if (water <= 0) water = 0;
+        if (comp <= 0) comp = 0;
     }
         public void AddToComp()
     {
@@ -152,6 +145,7 @@ public class UI_Manager : GameBehaviour
         {
             fert = fert + 1f;
             fertStore = fertStore - 1;
+            comp = comp - 1;
         }
     }
     public void AddPest()
@@ -170,7 +164,7 @@ public class UI_Manager : GameBehaviour
     public void CollectFert()
     {
         if (comp >= 3)
-        fertStore = fertStore + 1;
+        fertStore = fertStore + 3;
     }
     public void GetPest()
     {
@@ -181,14 +175,16 @@ public class UI_Manager : GameBehaviour
     IEnumerator Delay()
     {
         Debug.Log("delayed");
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(10);
         Debug.Log("added");
-        pestStore = pestStore + 1;
+        pestStore = pestStore + 4;
         StopCoroutine(Delay());
     }
-    IEnumerator Spawn()
+    public void Spawn()
     {
-        if (Random.value < .2)
+        int rnd = Random.Range(0, 2);
+        Debug.Log(rnd);
+        if (rnd == 0)
         {
             
             trash.SetActive(true);
@@ -197,9 +193,6 @@ public class UI_Manager : GameBehaviour
         {
             compost.SetActive(true);
         }
-            
-        yield return new WaitForEndOfFrame();
-        StopCoroutine(Spawn());
     }
     public void GameOver()
     {
