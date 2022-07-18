@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
+    
     public GameObject[] section;
-    public int zPos = 50;
-    public bool creatingSection = false;
+    public int zPos = 250;
+    
     public int secNum;
+    public float despawn = -100;
+    
 
 
-    void Update()
+    public void Store(GameObject _go)
     {
-        if(creatingSection == false)
-        {
-            creatingSection = true;
-            StartCoroutine(GenerateSec());
-        }
+        Destroy(_go);
+        Build();
     }
-    IEnumerator GenerateSec()
+    void Build()
     {
         secNum = Random.Range(0, section.Length);
-        Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
-        zPos += 50;
-        yield return new WaitForSeconds(1);
-        creatingSection = false;
+        GameObject go = Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        //zPos += 50;
+        //creatingSection = false;
     }
 }
