@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 1744285630658705298}
   - component: {fileID: 1744285630658705301}
   - component: {fileID: 1744285630658705300}
+  - component: {fileID: 7088574564307272072}
   m_Layer: 0
   m_Name: ob1 (3)
   m_TagString: Enemy
@@ -208,11 +209,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285630658705302}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7088574564307272072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285630658705302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &1744285631001252243
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +244,7 @@ GameObject:
   - component: {fileID: 1744285631001252239}
   - component: {fileID: 1744285631001252238}
   - component: {fileID: 1744285631001252241}
+  - component: {fileID: 1073175035819459735}
   m_Layer: 0
   m_Name: ob2 (4)
   m_TagString: Enemy
@@ -305,12 +325,30 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285631001252243}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1073175035819459735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285631001252243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &1744285631328734874
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +361,7 @@ GameObject:
   - component: {fileID: 1744285631328734870}
   - component: {fileID: 1744285631328734873}
   - component: {fileID: 1744285631328734872}
+  - component: {fileID: 1566056505051719556}
   m_Layer: 0
   m_Name: ob1 (4)
   m_TagString: Enemy
@@ -403,11 +442,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285631328734874}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1566056505051719556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285631328734874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &1744285631340953458
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +477,7 @@ GameObject:
   - component: {fileID: 1744285631340953454}
   - component: {fileID: 1744285631340953457}
   - component: {fileID: 1744285631340953456}
+  - component: {fileID: 6910010183406452558}
   m_Layer: 0
   m_Name: ob1 (1)
   m_TagString: Enemy
@@ -500,11 +558,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285631340953458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6910010183406452558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285631340953458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &1744285631446700389
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +593,7 @@ GameObject:
   - component: {fileID: 1744285631446700385}
   - component: {fileID: 1744285631446700384}
   - component: {fileID: 1744285631446700387}
+  - component: {fileID: 2028508198115623282}
   m_Layer: 0
   m_Name: ob2 (5)
   m_TagString: Enemy
@@ -597,12 +674,30 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285631446700389}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &2028508198115623282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285631446700389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &1744285631824692508
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +710,7 @@ GameObject:
   - component: {fileID: 1744285631824692504}
   - component: {fileID: 1744285631824692507}
   - component: {fileID: 1744285631824692506}
+  - component: {fileID: 4928777877270457901}
   m_Layer: 0
   m_Name: ob1 (2)
   m_TagString: Enemy
@@ -695,8 +791,26 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744285631824692508}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4928777877270457901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744285631824692508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9032699824919149227}
   - component: {fileID: 9032699824919149226}
   - component: {fileID: 9032699824919149229}
+  - component: {fileID: 5422343398259975494}
   m_Layer: 0
   m_Name: ob1 (4)
   m_TagString: Enemy
@@ -92,11 +93,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032699824919149231}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5422343398259975494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032699824919149231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &9032699825352846131
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +128,7 @@ GameObject:
   - component: {fileID: 9032699825352846143}
   - component: {fileID: 9032699825352846142}
   - component: {fileID: 9032699825352846129}
+  - component: {fileID: 5169507915643203728}
   m_Layer: 0
   m_Name: ob1 (3)
   m_TagString: Enemy
@@ -189,11 +209,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032699825352846131}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5169507915643203728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032699825352846131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &9032699825733069627
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +244,7 @@ GameObject:
   - component: {fileID: 9032699825733069607}
   - component: {fileID: 9032699825733069606}
   - component: {fileID: 9032699825733069625}
+  - component: {fileID: 5857139074811414713}
   m_Layer: 0
   m_Name: ob1 (2)
   m_TagString: Enemy
@@ -286,11 +325,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032699825733069627}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5857139074811414713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032699825733069627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &9032699825854719429
 GameObject:
   m_ObjectHideFlags: 0

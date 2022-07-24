@@ -23,13 +23,13 @@ public class PivotController : MonoBehaviour
 
     void Pivot(PivotDirection _dir)
     {
-        if(_dir == PivotDirection.Left)
-        {
+         if (_dir == PivotDirection.Right)
+            {
             transform.DOLocalRotate(new Vector3(0, pivotRotation, 0), pivotTweenTime).SetEase(ease);
         }
-        else
+        if (_dir == PivotDirection.Left)
         {
-            transform.DOLocalRotate(new Vector3(0, -pivotRotation, 0), pivotTweenTime).SetEase(ease);
+            transform.DOLocalRotate(new Vector3(0, 270 + pivotRotation, 0), pivotTweenTime).SetEase(ease);
         }
-    }
+    }  
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4310337208421025264}
   - component: {fileID: 4310337208421025271}
   - component: {fileID: 4310337208421025270}
+  - component: {fileID: 2246450494854038374}
   m_Layer: 0
   m_Name: ob1 (3)
   m_TagString: Enemy
@@ -92,11 +93,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310337208421025268}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2246450494854038374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310337208421025268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &4310337208544335054
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +242,7 @@ GameObject:
   - component: {fileID: 4310337208698029279}
   - component: {fileID: 4310337208698029278}
   - component: {fileID: 4310337208698029277}
+  - component: {fileID: 6992367910686380839}
   m_Layer: 0
   m_Name: ob1 (2)
   m_TagString: Enemy
@@ -303,11 +323,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310337208698029267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6992367910686380839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310337208698029267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &4310337209140189830
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +358,7 @@ GameObject:
   - component: {fileID: 4310337209140189826}
   - component: {fileID: 4310337209140189825}
   - component: {fileID: 4310337209140189824}
+  - component: {fileID: 4530020381002908925}
   m_Layer: 0
   m_Name: ob1 (1)
   m_TagString: Enemy
@@ -400,11 +439,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310337209140189830}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4530020381002908925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310337209140189830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &4310337209240918123
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +474,7 @@ GameObject:
   - component: {fileID: 4310337209240918103}
   - component: {fileID: 4310337209240918102}
   - component: {fileID: 4310337209240918101}
+  - component: {fileID: 679475605923452183}
   m_Layer: 0
   m_Name: ob1 (4)
   m_TagString: Enemy
@@ -497,8 +555,26 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310337209240918123}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &679475605923452183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310337209240918123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1

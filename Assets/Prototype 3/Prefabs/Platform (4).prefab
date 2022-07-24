@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5537607156657601174}
   - component: {fileID: 5537607156657601173}
   - component: {fileID: 5537607156657601172}
+  - component: {fileID: 5698134215833145008}
   m_Layer: 0
   m_Name: ob1 (1)
   m_TagString: Enemy
@@ -92,11 +93,29 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5537607156657601170}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5698134215833145008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537607156657601170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &5537607156815254417
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +128,7 @@ GameObject:
   - component: {fileID: 5537607156815254421}
   - component: {fileID: 5537607156815254420}
   - component: {fileID: 5537607156815254419}
+  - component: {fileID: 4487936878234067807}
   m_Layer: 0
   m_Name: ob2 (1)
   m_TagString: Enemy
@@ -189,12 +209,30 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5537607156815254417}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &4487936878234067807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537607156815254417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &5537607157373825876
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +245,7 @@ GameObject:
   - component: {fileID: 5537607157373825864}
   - component: {fileID: 5537607157373825879}
   - component: {fileID: 5537607157373825878}
+  - component: {fileID: 3342446725680255390}
   m_Layer: 0
   m_Name: ob2 (3)
   m_TagString: Enemy
@@ -287,12 +326,30 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5537607157373825876}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &3342446725680255390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537607157373825876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1
 --- !u!1 &5537607157430892717
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +476,7 @@ GameObject:
   - component: {fileID: 5537607157441322815}
   - component: {fileID: 5537607157441322814}
   - component: {fileID: 5537607157441322813}
+  - component: {fileID: 4954515927187099612}
   m_Layer: 0
   m_Name: ob2 (2)
   m_TagString: Enemy
@@ -499,9 +557,27 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5537607157441322811}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &4954515927187099612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537607157441322811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0869a5803fdb840a176db9d2dc20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  strength: 5
+  vibrate: 5
+  randomness: 5
+  snaping: 0
+  fade: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Section : GameBehaviour
 {
-   float moveSpeed = 10;
+   float moveSpeed = 20;
     GenerateLevel _GL;
 
     private void Start()
