@@ -17,6 +17,14 @@ public class Shake : MonoBehaviour
     {
         col = GetComponent<Collider>();
     }
+    private void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            transform.DOShakePosition(duration, strength, vibrate, randomness, snaping, fade);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
