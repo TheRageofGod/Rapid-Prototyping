@@ -7,6 +7,7 @@ public class GameBehaviour : MonoBehaviour
 {
     protected static Timer _TIMER { get { return Timer.INSTANCE; } }
     protected static UIManager _UI { get { return UIManager.INSTANCE; } }
+    protected static Prototype4_Manager _P4 { get { return Prototype4_Manager.INSTANCE; } }
 
     /// <summary>
     /// Gets Random colour using the RGB colourWheel with an alpha of 1

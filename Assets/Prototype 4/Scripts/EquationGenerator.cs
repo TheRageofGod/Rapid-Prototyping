@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquationGenerator : MonoBehaviour
+public class EquationGenerator : GameBehaviour
 {
     public enum Difficulty { EASY, MEDIUM, HARD }
 
@@ -60,6 +60,7 @@ public class EquationGenerator : MonoBehaviour
         Debug.Log(numberOne + " + " + numberTwo + " = " + correctAnswer);
 
         GenerateDummyAnswers();
+        _P4.Display(numberOne + " + " + numberTwo, correctAnswer, dummyAnswers[0]);
     }
 
     void GenerateSubtraction()
