@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquationGenerator : GameBehaviour
+public class EquationGenerator : GameBehaviour<EquationGenerator>
 {
     public enum Difficulty { EASY, MEDIUM, HARD }
 
@@ -13,21 +13,25 @@ public class EquationGenerator : GameBehaviour
     public int correctAnswer;
 
     public List<int> dummyAnswers;
+    private void Start()
+    {
+        GenerateAddition();
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-            GenerateMultiplication();
-        if (Input.GetKeyDown(KeyCode.A))
+       // if (Input.GetKeyDown(KeyCode.M))
+            //GenerateMultiplication();
+        if (Input.GetKeyDown(KeyCode.G))
             GenerateAddition();
-        if (Input.GetKeyDown(KeyCode.D))
-            GenerateDivision();
+       // if (Input.GetKeyDown(KeyCode.D))
+           // GenerateDivision();
 
-        if (Input.GetKeyDown(KeyCode.R))
-            GenerateRandomEquation();
+       // if (Input.GetKeyDown(KeyCode.R))
+            //GenerateRandomEquation();
     }
 
-    void GenerateRandomEquation()
+    public void GenerateRandomEquation()
     {
         int rnd = Random.Range(1, 100);
         if (rnd <= 35)
@@ -40,7 +44,7 @@ public class EquationGenerator : GameBehaviour
             GenerateDivision();
     }
 
-    void GenerateMultiplication()
+    public void GenerateMultiplication()
     {
         numberOne = GetRandomNumbers();
         numberTwo = GetRandomNumbers();
@@ -51,7 +55,7 @@ public class EquationGenerator : GameBehaviour
         GenerateDummyAnswers();
     }
 
-    void GenerateAddition()
+    public void GenerateAddition()
     {
         numberOne = GetRandomNumbers();
         numberTwo = GetRandomNumbers();
@@ -63,7 +67,7 @@ public class EquationGenerator : GameBehaviour
         _P4.Display(numberOne + " + " + numberTwo, correctAnswer, dummyAnswers[0]);
     }
 
-    void GenerateSubtraction()
+    public void GenerateSubtraction()
     {
         numberOne = GetRandomNumbers();
         numberTwo = GetRandomNumbers();
@@ -74,7 +78,7 @@ public class EquationGenerator : GameBehaviour
         GenerateDummyAnswers();
     }
 
-    void GenerateDivision()
+    public void GenerateDivision()
     {
         numberOne = GetRandomNumbers();
         numberTwo = GetRandomNumbers();
@@ -88,7 +92,7 @@ public class EquationGenerator : GameBehaviour
     /// Gets a random number based on our difficulty
     /// </summary>
     /// <returns>A random number</returns>
-    int GetRandomNumbers()
+    public int GetRandomNumbers()
     {
         switch (difficulty)
         {
@@ -106,7 +110,7 @@ public class EquationGenerator : GameBehaviour
     /// <summary>
     /// This will generate a set of dummy answers
     /// </summary>
-    private void GenerateDummyAnswers()
+    public void GenerateDummyAnswers()
     {
         for (int i = 0; i < dummyAnswers.Count; i++)
         {

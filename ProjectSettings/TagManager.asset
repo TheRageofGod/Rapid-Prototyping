@@ -9,11 +9,12 @@ TagManager:
   - drag
   - pile
   - bin
+  - Gate
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interact
   - Water
   - UI
   - 
