@@ -10,6 +10,7 @@ public class LockedDoor : MonoBehaviour
     public float duration = 1;
     public bool snapping = true;
     public int locksOnDoor;
+    bool unlocked = false;
 
     public GameObject[] Locks;
     void Start()
@@ -18,14 +19,14 @@ public class LockedDoor : MonoBehaviour
     }
     private void Update()
     {
-        UnlockingDoor();
+        if (locksOnDoor <= 0 && unlocked == false)
+            UnlockingDoor();
     }
 
     public void UnlockingDoor()
     {
-        if (locksOnDoor <= 0) 
-        {
+       
             transform.DOMove(open.position, duration, snapping);
-        }
+            unlocked = true;
     }
 }

@@ -8,19 +8,14 @@ public class Enemy_P5 : MonoBehaviour
     public int health = 1;
     public Rigidbody rb;
     public Collider col;
-
-    // Update is called once per frame
-    void Update()
+    public void Shot()
     {
-        if(health <= 0)
+        health = health - 1;
+        Debug.Log("Do Thing To Enemy");
+        if (health <= 0)
         {
             Die();
         }
-    }
-    public void Shot()
-    {
-        health = 0;
-        Debug.Log("Do Thing To Enemy");
     }
     public void Die()
     {
@@ -38,6 +33,6 @@ public class Enemy_P5 : MonoBehaviour
     public IEnumerator DestroyThis()
     {
         yield return new WaitForSeconds(1);
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
