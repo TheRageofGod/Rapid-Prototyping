@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class Vent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Collider col;
+    public Rigidbody rb;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OpenVent()
     {
         Debug.Log("Open Vent");
+        rb.useGravity = true;
+        //col.isTrigger = true;
     }
 }

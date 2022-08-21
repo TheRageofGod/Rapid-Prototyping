@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class HackPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Rigidbody rb;
+   
 
     public void Hack()
     {
         Debug.Log("hacked");
+        rb.useGravity = true;
     }
 }

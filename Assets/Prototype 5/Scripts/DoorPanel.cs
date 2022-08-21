@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class DoorPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public OpenDoor od;
     public void CloseDoor()
     {
+        od.Close();
         Debug.Log("Do Thing To Door");
+        //triggeranimation 
+        //freeze enemy
     }
 }
