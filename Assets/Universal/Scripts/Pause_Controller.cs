@@ -16,13 +16,21 @@ public class Pause_Controller : MonoBehaviour
     
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.Escape))
             Pause();
     }
     public void Pause()
     {
+        Cursor.lockState = CursorLockMode.None;
         paused = !paused;
         pausePanel.SetActive(paused);
         Time.timeScale = paused ? 0 : 1;
+            DisableCursor();
+    }
+    public void DisableCursor()
+    {
+        if (paused == false)
+            Cursor.lockState = CursorLockMode.Locked;
     }
 }

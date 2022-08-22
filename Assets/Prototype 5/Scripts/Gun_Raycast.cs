@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Gun_Raycast : MonoBehaviour
 {
+    public LineRenderer lr;
+    public Transform[] points;
 
     [SerializeField] private int rayLength = 5;
     [SerializeField] private int MeleeRange = 2;
@@ -24,10 +27,17 @@ public class Gun_Raycast : MonoBehaviour
     private const string MeleeTag1 = "HackPanel"; 
     private const string MeleeTag2 = "Vent";
 
+    private void Start()
+    {
+        SetUpLine(points);
+        lr.material.DOFade(0, 0);
+    }
     void Update()
     {
         if (Input.GetKeyDown(code))
         {
+            
+            
             RaycastHit hit;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
@@ -35,6 +45,11 @@ public class Gun_Raycast : MonoBehaviour
 
             if (Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
             {
+                lr.SetPosition(0, points[0].position);
+                lr.SetPosition(1, hit.point);
+                lr.material.DOFade(1, 0);
+                lr.material.DOFade(0, 1);
+
                 if (hit.collider.CompareTag(Tag1)) // enemy 
                 {
                     if (hit.collider.gameObject.GetComponent<Enemy_P5>() != null)
@@ -89,4 +104,10 @@ public class Gun_Raycast : MonoBehaviour
             }
         }
     }
-}
+
+    public void SetUpLine(Transform[] points)
+    {
+        lr.positionCount = points.Length;
+        this.points = points;
+    }
+} 
