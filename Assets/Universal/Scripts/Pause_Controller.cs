@@ -26,7 +26,7 @@ public class Pause_Controller : MonoBehaviour
         paused = !paused;
         pausePanel.SetActive(paused);
         Time.timeScale = paused ? 0 : 1;
-            DisableCursor();
+        DisableCursor();
     }
     public void DisableCursor()
     {
