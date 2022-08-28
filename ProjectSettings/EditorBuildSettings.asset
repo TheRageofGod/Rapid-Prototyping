@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype 5/Scenes/Testing scene.unity
     guid: 4bc9fcaa2d096694ebd44e692768309d
+  - enabled: 1
+    path: Assets/Prototype 5/Scenes/PrisonBreak.unity
+    guid: 5c6dd58a9faf41f45ad1cf26c05cd010
   m_configObjects: {}
